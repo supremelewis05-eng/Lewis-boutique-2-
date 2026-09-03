@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Lewis Boutique</title>
+    <style>
+        /* ========== STYLE CSS ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #f9f6f2;
+            color: #1e1e1e;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: #1e1e1e;
+            color: #fff;
+        }
+
+        header h1 {
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: #ccc;
+            margin-left: 30px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+            color: #fff;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+
+        .hero p {
+            margin: 15px 0;
+            font-size: 1.2rem;
+            color: #bbb;
+        }
+
+        button {
+            background: #d4a373;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            color: #fff;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #b5835a;
+            transform: scale(1.03);
+        }
+
+        .produits {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 50px 20px;
+            flex-wrap: wrap;
+        }
+
+        .carte {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+            width: 220px;
+            transition: 0.3s;
+        }
+
+        .carte:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .carte img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .carte h3 {
+            font-weight: 400;
+        }
+
+        .carte p {
+            color: #b5835a;
+            font-weight: 600;
+            margin: 8px 0 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #1e1e1e;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HTML ========== -->
+    <header>
+        <h1>👔 Lewis Boutique</h1>
+        <nav>
+            <a href="#">Accueil</a>
+            <a href="#">Homme</a>
+            <a href="#">Femme</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Nouvelle collection été 2026</h2>
+        <p>Élégance et confort pour chaque instant.</p>
+        <button onclick="ajouterPanier()">Découvrir</button>
+    </section>
+
+    <section class="produits">
+        <div class="carte">
+            <img src="https://placehold.co/200x250/eee/333?text=Chemise" alt="Chemise">
+            <h3>Chemise blanche</h3>
+            <p>45 €</p>
+            <button onclick="ajouterPanier()">Ajouter</button>
+        </div>
+        <div class="carte">
+            <img src="https://placehold.co/200x250/eee/333?text=Jean" alt="Jean">
+            <h3>Jean slim</h3>
+            <p>59 €</p>
+            <button onclick="ajouterPanier()">Ajouter</button>
+        </div>
+        <div class="carte">
+            <img src="https://placehold.co/200x250/eee/333?text=Blazer" alt="Blazer">
+            <h3>Blazer noir</h3>
+            <p>89 €</p>
+            <button onclick="ajouterPanier()">Ajouter</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Lewis Boutique – Tous droits réservés</p>
+    </footer>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        function ajouterPanier() {
+            alert("✅ Article ajouté au panier !");
+        }
+
+        console.log("👋 Bienvenue sur Lewis Boutique - Style & Élégance");
+
+        document.querySelector("header h1")?.addEventListener("click", function() {
+            this.style.color = "#d4a373";
+        });
+    </script>
+
+</body>
+</html>
